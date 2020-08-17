@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation Page</title>
+
+<!-- start fonts and stylesheet -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="documentation.css">
+
+<!-- end fonts and stylesheet -->
+
+</head>
+<body>
+
+<!-- start nav  -->
+
+  <nav id="navbar">
+    <header>
+      <h1>HTML/CSS Documentation</h1>
+    </header>
+      <div class="nav-links">
+        <a class="nav-link" href="#introduction">Introduction</a>
+        <a class="nav-link" href="#objectives">Objectives</a>
+        <a class="nav-link" href="#semantic_html_tags">Semantic HTML Tags</a>
+        <a class="nav-link" href="#positioning">Positioning</a>
+        <a class="nav-link" href="#animation_with_css">Animation with CSS</a>
+        <a class="nav-link" href="#responsive_web_design">Responsive Web Design</a>
+        <a class="nav-link" href="#flexbox">Flexbox</a>
+        <a class="nav-link" href="#grid">Grid</a>
+        <a class="nav-link" href="#reference">Reference</a>
+      </div>
+  </nav>
+  
+<!-- end nav -->
+
+  <main id="main-doc">
+
+   <!-- start introduction section -->
+    
+    <section class="main-section" id="introduction">
+      <header><h2>Introduction</h2></header>
+      <p>HTML, or HyperText Markup Language, is a markup language used to describe the structure of a web page. It uses a special syntax or notation to organize and give information about the page to the browser. Elements usually have opening and closing tags that surround and give meaning to content. For example, there are different tag options to place around text to show whether it is a heading, a paragraph, or a list.</p>
+      <p>Cascading Style Sheets (CSS) tell the browser how to display the text and other content that you write in HTML. Note that CSS is case-sensitive so be careful with your capitalization. CSS has been adopted by all major browsers and allows you to control:
+      <ul>
+        <li>color</li>
+        <li>fonts</li>
+        <li>positioning</li>
+        <li>spacing</li>
+        <li>sizing</li>
+        <li>decorations</li>
+        <li>transitions</li>
+      </ul> 
+      <p>There are three main ways to apply CSS styling. You can apply inline styles directly to HTML elements with the style attribute. Alternatively, you can place CSS rules within style tags in an HTML document. Finally, you can write CSS rules in an external style sheet, then reference that file in the HTML document. Even though the first two options have their use cases, most developers prefer external style sheets because they keep the styles separate from the HTML elements. This improves the readability and reusability of your code.</p>
+    </section>
+
+    <!-- end introduction section -->
+
+    <!-- start objectives section -->
+
+    <section class="main-section" id="objectives">
+      <header><h2>Objectives</h2></header>
+      <p>After reading over this documentation, you will be able to understand the basics of using HTML and CSS. The main objectives of this documentation are:</p>
+      <ol>
+        <li>Understand the basics of HTML and understand the importance of applying semantic tags to your page.</li>
+        <li>Understand the basics of CSS and how to style your HTML page.</li>
+        <li>Understand how to implement correct elements to make your website responsive for every device.</li>
+      </ol> 
+    </section>
+
+    <!-- end objectives section -->
+
+    <!-- start html semantic tags section -->
+
+    <section class="main-section" id="semantic_html_tags">
+      <header><h2>Semantic HTML Tags</h2></header>
+      <p>Semantic tags are important and useful for oranizing your HTML document and make it more readable, it also improves SEO optimization on your page. The semantic tags are the following:</p>
+      <ul>
+        <li><strong>header:</strong> This inclused h1, and overall header part of your page.</li>
+        <li><strong>footer:</strong> Includes footer (sometimes there can be links and icons) - normally it should be sticky.</li>
+        <li><strong>nav:</strong> 
+Includes main navigation area (Links menu) on top of the header for example.</li>
+        <li><strong>main:</strong>Main content of the page goes here.</li>
+        <li><strong>article:</strong>Separate content (Normally used in blogs/news, etc).</li>
+        <li><strong>aside:</strong>Defines some content aside from the content it is place in. Should be related to the surrounding content.</li>
+        <li><strong>figure:</strong>Image, diagram or chart - Group content alongside with its respective figcaption.</li>
+        <li><strong>figcaption:</strong>Alongside with figure, as it name states defines the caption of the image/diagram or chat.</li>
+        <li><strong>audio:</strong>To add an audio file, it should incruble source and type of audio</li>
+        <li><strong>label:</strong>Used to improve form field accessibility, wraps the text for a specific form control item, with its for attribute that associated it with its item - needs to be named with the same id name of the item.</li>
+        <li><strong>fieldset:</strong>Used to wrap radio buttons alongside with its legend tag.</li>
+      </ul>
+    </section>
+
+    <!-- end html semantic tags section -->
+
+    <!-- start positioning section -->
+
+    <section class="main-section" id="positioning">
+      <header><h2>Positioning</h2></header>
+      <p>The positioning properties in CSS include the following:</p>
+      <h3>Relative:</h3>
+      <p>It allows to specify how CSS should move it relative to its default position. It is accompanied by the CSS offset properties of left or right, and top or bottom. These day how many pixels, percentage, or ems to move the item away from its default/normal position.</p>
+      <p><i>For example: I want to move the h2 10 pixels away from the bottom and 20 pixels away from the top:</i></p>
+      <pre>
+        <code>
+    h2 {
+    position: relative;
+    top: 20px;
+    bottom: 10px;}      
+        </code>
+      </pre>
+      <h3>Absolute:</h3>
+      <p>Locks the element relative to its parent container. It's important to add a position rule to the parent element (by using position: relative in the parent element), otherwise, the browser will keep looking up the chain and ultimately will use the body tag position. This position is also accompanied by the CSS offset properties of left or right, and top or bottom.</p>
+      <p><i>For example: I want to lock the h2 50 pixels away from the top and from the right from its parent element (in this case a div class named container):</i></p>
+      <pre>
+        <code>
+        .container {
+    position: relative;} 
+        h2 {
+    position: absolute;
+    top: 50px;
+    bottom: 50px;}
+        </code>
+      </pre>  
+      <h3>Fixed:</h3>
+      <p>Locks the element relative to the browser window An element with a fixed positioned won't move when the user scrolls.</p>
+      <p><i>For example: I want the navigation bar (with a class named navbar) from my page to keep showing top when I scroll the page:</i></p>
+      <pre>
+        <code>
+        .navbar {
+    position: fixed;
+    top: 0px;
+    right: 0px;}
+        </code>
+      </pre>
+      <p>Other positioning uses are the following:</p>
+      <h3>Z-index:</h3>
+      <p>Used to change the position of overlapping elements. It can specify the order of how elements are stacked on top of one another.</p>
+      <p><i>For example: I have two boxes, with classes .first and .second, if i want the .first box to cover the .second box, I would need to do the following:</i></p>
+      <pre>
+        <code>
+        .first {
+    position: absolute;
+    z-index: 1; this means it will go in front of the other element}
+    .second {
+    position: absolute;}
+        </code>
+      </pre>
+      <h3>Margin auto</h3>
+      <p>A way to horizontally center an element is by using margin: auto.</p>
+      <p><i>For example: I want to move my box with class .box to the center of my page (horizontally):</i></p>
+      <pre>
+        <code>
+        .box {
+    margin: auto;}
+        </code>
+    </pre>
+    </section>
+
+    <!-- end positioning section  -->
+    
+    <!-- start animation section -->
+
+    <section class="main-section" id="animation_with_css">
+      <header><h2>Animation with CSS</h2></header>
+      <p>There are 8 animation properties in total:</p>
+      <ul>
+        <li><strong>animation-name</strong></li>
+        <p>As the name says, this animation property sets the name of the animation. The animation-name property will be used by @keyframes to tell CSS which rules go with each animation property (rules that control what happens during each animation). This is done by giving CSS properties for specific "frames" during the animation with percentages, being 0% the start of the animation and 100% the end.</p>
+        <li><strong>animation-duration</strong></li>
+        <p>This animation property sets the length of time for the animation. Here is an example using both animation-name and animation-duration properties: <i>I want to create an animation with color changes to my element with class name .circle:</i></p>
+        <pre>
+          <code>
+     .circle {
+     animation-name: color-change;
+     animation-duration: 5s;}
+
+     @keyframes color-change {
+     0% {
+     background-color: pink;
+     }
+
+     50% {
+     background-color: purple;}
+
+     100% {    
+     background-color: red;} }
+          </code>
+        </pre>
+        <li><strong>animation-timing-function</strong></li>
+        <p>Controls how quickly an animated element changes over the duration of the animation. The values are:</p>
+            <ul>
+            <li><strong>ease:</strong> default value, which starts slow, speeds up and then slows down in the end.</li>
+            <li><strong>ease-out:</strong> quick at start and slows down</li>
+            <li><strong>ease-in:</strong> slow at start and speeds up</li>
+            <li><strong>linear:</strong> applies constant speed</li>
+            </ul>
+        <p>This property can also be controlled with <i><strong>Bezier curves</strong></i>, these are used with the <u>cubic-bezier</u> function. You control the animation with the four main points (p0, p1, p2, p3) being as follows (x1, y1, x2, y2).</p>
+        <li><strong>animation-delay</strong></li>
+        <p>This property specifies a delay for the start of an animation. The value is defined in seconds (s) or milliseconds (ms).</p>
+        <li><strong>animation-iteration-count</strong></li>
+        <p>This property allows you to control how many times you want your animation to repeat. For example, I want my .circle to repeat its animation continuously:</p>
+        <pre>
+          <code>
+     .circle {
+     animation-name: color-change;
+     animation-duration: 5s;
+     animation-iteration-count: infinite;}
+
+     @keyframes color-change {
+
+     50% {
+     background-color: red;
+     }
+     100% {
+     background-color: blue;}}
+          </code>
+        </pre> 
+        <li><strong>animation-direction</strong></li>
+        <p>This property allows you to control whether your animation should be played <i>forwards</i>, <i>backwards</i> or in <id>alternate</id> cycles.</p>
+        <li><strong>animation-fill-mode</strong></li>
+        <p>This property used as: animation-fill-mode: forwards; keeps the last thing of animation on the element. For example: I want my .circle (that is initially pink), to keep the color blue while hovered:</p>
+        <pre>
+          <code>
+     .circle:hover {
+     animation-name: color-highlight;
+     animation-duration:  3s;
+     animation-fill-mode: forwards;}
+
+     @keyframes color-highlight {
+     100%  {
+     background-color: blue;}}
+          </code>
+        </pre>
+        <li><strong>animation-play-state</strong></li>
+        <p>This property defines whether the animation is <i>running</i> or <i>paused</i>.</p>
+      </ul>  
+    </section>
+
+    <!-- end animation section -->
+
+    <!-- start responsive web design section -->
+
+    <section class="main-section" id="responsive_web_design">
+      <header><h2>Responsive Web Design</h2></header>
+        <h3>Media Query</h3>
+        <p>It's used to define how content is seen depending on type of device. Values can be, max-width, max-height, min-width, min-height. For example: I want my content to display in a certain way when the user is using a device with width less than 300px:</p>
+        <pre>
+          <code>
+     @media (max-width: 300px) {
+     /*CSS rules to be applied*/}
+          </code>
+        </pre>  
+        <h3>Responsive Images</h3>
+        <p>To make an image responsive, you just need to add the following properties to an image:</p>
+        <pre>
+          <code>
+      img {
+      max-width: 100%
+      height: auto;}
+          </code>
+        </pre>  
+        <h3>Retina Image</h3>
+        <p>To make images optimized for High-resolution displays, you need to define their width and height values as half of what the original file is.</p>
+        <h3>Responsive Text</h3>
+        <p>Make a text responsive by using Viewport units (width or height) and percentages relative to its parent container size. The four viewport units are:</p>
+        <ul>
+          <li><strong>vw</strong> (viewport width): 10vw would be 10% of the viewport's width.</li>
+          <li><strong>vh</strong> (viewport height): 3vh would be 3% of the viewport's height.</li>
+          <li><strong>vmin</strong> (viewport minimum): 70vmin would be 70% of the viewport's smaller dimension (height or width).</li>
+          <li><strong>vmax</strong> (viewport maximum): 100vmax would be 100% of the viewport's bigger dimension (height or width).</li>
+        </ul>
+    </section>
+
+    <!-- end responsive web design section -->
+
+    <!-- start flexbox section -->
+
+    <section class="main-section" id="flexbox">
+      <header><h2>Flexbox</h2></header>
+      <p>Placing the CSS property display:flex on an element allows you to use other flex properties to build a responsive page.</p>
+      <p>To align the "flexed element" into rows and columns, you add the flex-direction property to the parent item and set it to row or column.</p>
+      <table class="table">
+        <tr>
+          <th>main-axis</th>
+          <th>cross-axis</th>
+        </tr>
+        <tr>
+          <td>for rows, the main axis is a horizontal line and for columns the main axis is a vertical line.</td>
+          <td>for rows, the cross axis is a vertical line and for columns the cross axis is a horizontal line.</td>
+        </tr>
+      </table>
+      <p>The following are properties for flex container:</p>
+      <h3>Justify Content</h3>
+      <p>To tell CSS how to align and space out the flex items within a container a certain way along the main-axis. (How they fill the space of the container).</p>
+        <ul>
+          <li><strong>center: </strong>aligns all the flex items to the center of the container.</li>
+          <li><strong>flex-start: </strong>aligns the items to the start of the container, for columns, this pushes the items to the top of the container, and for rows, this pushes the items to the left of the container. (If there is no justify-content specified, this is the default alignment).</li>
+          <li><strong>flex-end: </strong>aligns the items to the end of the container, for columns, this pushes the items to the bottom of the container, and for rows, this pushes the items to the right of the container.</li>
+          <li><strong>space-between: </strong>aligns items to the center of the main axis, with extra space placed between the items. This pushes the first and last item to the very edge of the container.</li>
+          <li><strong>space-around: </strong>similar to space-between, but the first and last item have a space between item and edge of container.</li>
+          <li><strong>space-evenly: </strong> distributes space between flex items evenly, giving a full space at either end of the container.</li>
+      </ul>
+      <h3>Align-Items</h3>
+      <p>To tell CSS how to align and space out the flex items within a container a certain way along the cross-axis. (How they fill the space of the container).</p>
+        <ul>
+          <li><strong>center: </strong>aligns items to the center. For rows, this vertically aligns items (equal space above and below the items). For columns, this horizontally aligns items (equal space to the left and right of the items).</li>
+          <li><strong>flex-start: </strong>aligns the items to the start of the container, for rows, this pushes the items to the top of the container, and for columns, this pushes the items to the left of the container. (If there is no justify-content specified, this is the default alignment).</li>
+          <li><strong>flex-end: </strong>aligns the items to the end of the container, for rows, this pushes the items to the bottom of the container, and for columns, this pushes the items to the right of the container.</li>
+          <li><strong>stretch: </strong>stretch the items to fill the flex container. For example, rows items are stretched to fill the flex container top-to-bottom. This is the default value if no align-items value is specified.</li>
+          <li><strong>baseline:  </strong>aligns items to their baselines.</li>
+      </ul>
+    </section>
+
+    <!-- end flexbox section -->
+
+    <!-- start grid section -->
+
+    <section class="main-section" id="grid">
+      <header><h2>Grid</h2></header>
+      <p>Once you set display:grid in your container, you can define the structure of the grid with both columns and rows. To add columns to the grid, use the grid-template-columns property on a grid container. For example, I want to set three columns on my container: *we specify the width in columns*</p>
+      <pre>
+        <code>
+    .container {
+    display: grid;
+    grid-template-columns: 20px 20px 20px;}
+        </code>
+      </pre>
+      <p>This will set the number of rows automatically, according to the specified width and number of columns. To adjust the rows manually, use the grid-template-rows property in the same way. *we specify the height in rows*</p>
+      <h3>Change size of Columns and Rows</h3>
+      <p>To define the size of rows and columns you can use the following units:</p>
+        <ul>
+          <li><strong>px: </strong>pixels as we know</li>
+          <li><strong>em: </strong>size according to parent element</li>
+          <li><strong>fr: </strong>sets the column or row to a fraction of the available space</li>
+          <li><strong>auto: </strong>sets the column or row to the width or height of its content automatically</li>
+          <li><strong>%: </strong>adjusts the column or row to the percent width of its container</li>
+      </ul>
+      <p>For example: I want to create five columns. The first column is as wide as its content (auto), the second column is 50px, the third column is 10% of its container, and for the last two columns, the remaining space is divided into three sections, two fractions of the available space are allocated for the fourth column, and one fraction is allocated for the fifth column:</p>
+      <pre>
+        <code>
+    grid-template-columns: auto 50px 10% 2fr 1fr;
+        </code>
+      </pre>
+      <h3>Add Gap in Grid</h3>
+      <p>To add a space between columns, use grid-column-gap with pixels. To add space between tows, use grid-row-gap with pixels. To shorten this, you can use grid-gap, if you add one value, it will apply for both rows and columns, if you add two, the first one will apply to rows and second one to columns.</p>
+      <p>For example, I want to create a gap of 5px between my rows and 20px between my columns:</p>
+      <pre>  
+        <code>
+     grid-gap: 5px 20px;
+        </code>
+      </pre>
+      <h3>Media Query in Grid for Responsiveness</h3>
+      <p>Make your site responsive with Grid by using <strong>@media</strong>:</p>
+      <p>For example: I want to make the header area occupy the top row completely and the footer area occupy the bottom row completely when the viewport width is 400px or more.</p>
+      <pre>
+        <code>
+      @media (min-width: 400px) {
+      .container {
+        grid-template-areas: 
+          "header header"
+          "advert content"
+          "footer footer"}
+        </code>
+      </pre>
+    </section>
+
+    <!-- end grid section -->
+
+    <!-- start reference section -->
+
+    <section class="main-section" id="reference">
+      <header><h2>Reference</h2></header>
+      <p>All the documentation of this page has been taken from <u>my personal notes</u> when my learning in <a href="https://www.freecodecamp.org/learn/">freecodecamp</a> <strong>Responsive Web Design Certification</strong></p>
+    </section>
+
+    <!-- end reference section -->
+
+  </main>
+</body>
+</html>
